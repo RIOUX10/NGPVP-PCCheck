@@ -1,0 +1,7 @@
+**/bin/
+**/obj/
+.git/
+.vscode/
+*.user
+*.suo
+README_RENDER.md

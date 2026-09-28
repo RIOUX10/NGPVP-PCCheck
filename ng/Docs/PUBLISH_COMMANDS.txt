@@ -1,0 +1,13 @@
+SERVER
+=======
+dotnet publish Server/NGPVP.Server.csproj -c Release -o publish/server
+
+STAFF
+=====
+dotnet publish Staff/NGPVP.Staff.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o publish/staff
+
+AGENT
+=====
+dotnet publish Agent/NGPVP.Agent.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o publish/agent
+
+For local testing, no edit is needed. For a remote player, pass the server URL as the first Agent argument, e.g. Agent.exe http://YOUR_PUBLIC_SERVER:5090.
